@@ -35,11 +35,13 @@ def getPosition():
 
 def dist(x1,y1,x2,y2):
 	return math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))
-def goToPosition(project):
+def close(x,y):
 	curPos=getPosition()
 
-	close=dist(curPos['x'],curPos['y'],project.x,project.y)
-	while (close>3):
+	return dist(curPos['x'],curPos['y'],x,y)
+def goToPosition(project):
+
+	while (close(project.x,project.y)>3):
 		print (curPos)
 		os.system("python go_to_specific_point_on_map.py "+str(project.x)+" "+str(project.y))
 	f=open(project.script,"r")
