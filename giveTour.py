@@ -40,9 +40,8 @@ def close(x,y):
 
 	return dist(curPos['x'],curPos['y'],x,y)
 def goToPosition(project):
-
 	while (close(project.x,project.y)>3):
-		print (curPos)
+		#print (curPos)
 		os.system("python go_to_specific_point_on_map.py "+str(project.x)+" "+str(project.y))
 	f=open(project.script,"r")
 	f1=f.readlines()
