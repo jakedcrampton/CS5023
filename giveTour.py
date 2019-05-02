@@ -32,7 +32,7 @@ def dist(x1,y1,x2,y2):
 	return math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))
 def goToPosition(project):
 	curPos=getPosition()
-	while (dist(curPos['x'],curPos['y'],project.x,project.y)>1)
+	while (dist(curPos['x'],curPos['y'],project.x,project.y)>1):
 		os.system("python go_to_specific_point_on_map.py "+str(project.x)+" "+str(project.y))
 	f=open(project.script,"r")
 	f1=f.readlines()
