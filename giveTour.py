@@ -23,6 +23,9 @@ import os
 #############
 # Helper Methods  #
 #############
+def getPosition():
+	reversedLines=reversed(open("filename").readlines())
+	print(reversedLines[3][27-31])
 def dist(x1,y1,x2,y2):
 	return math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))
 def goToPosition(project):
@@ -48,8 +51,9 @@ class project:
 		self.script
 
 if __name__ == '__main__':
-	projects = [project("rocket",-1.98,-8.15,"rocket.txt"),project("racecar",-1.21,-1.42,"racecar.txt"),project("uav",6.69,-0.51,"uav.txt"),project("buggy",12.22,-0.52,"buggy.txt"),project("rover",19.33,-10.9,"rover.txt")]
-	command = sys.argv[1]
-	if(command=="fullTour"):
-		for p in projects:
-			goToPosition(p)
+	getPosition()
+	#projects = [project("rocket",-1.98,-8.15,"rocket.txt"),project("racecar",-1.21,-1.42,"racecar.txt"),project("uav",6.69,-0.51,"uav.txt"),project("buggy",12.22,-0.52,"buggy.txt"),project("rover",19.33,-10.9,"rover.txt")]
+	#command = sys.argv[1]
+	#if(command=="fullTour"):
+	#	for p in projects:
+	#		goToPosition(p)
