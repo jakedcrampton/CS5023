@@ -25,18 +25,19 @@ import math
 # Helper Methods  #
 #############
 def getPosition():
-	file=open("position.txt")
+	os.system("touch tmp; rm tmp; touch tmp; cat postion.txt >> tmp")
+	file=open("tmp")
 	lines=file.readlines()
 	x=float(lines[-4].partition("[")[2].partition(",")[0])
 	y=float(lines[-4].partition("[")[2].partition(",")[2].partition(",")[0])
 	file.close()
 	return {'x': x, 'y' : y}
-	
+
 def dist(x1,y1,x2,y2):
 	return math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))
 def goToPosition(project):
 	curPos=getPosition()
-	
+
 	close=dist(curPos['x'],curPos['y'],project.x,project.y)
 	while (close>3):
 		print (curPos)
