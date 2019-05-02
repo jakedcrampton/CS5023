@@ -70,3 +70,31 @@ if __name__ == '__main__':
 	if(command=="fullTour"):
 		for p in projects:
 			goToPosition(p)
+	if(command=="buggy"):
+		for p in projects:
+			if(p.name==command):
+				goToPosition(p)
+	if(command=="uav"):
+		for p in projects:
+			if(p.name==command):
+				goToPosition(p)
+	if(command=="racecar"):
+		for p in projects:
+			if(p.name==command):
+				goToPosition(p)
+	if(command=="rover"):
+		for p in projects:
+			if(p.name==command):
+				goToPosition(p)
+	if(command=="rocket"):
+		for p in projects:
+			if(p.name==command):
+				goToPosition(p)
+	if(command=="goToNearest"):
+		small=project("tmp",0,0,"tmp")
+		closest=99999
+		for p in projects:
+			if(close(p.x,p.y)<closest):
+				small=p
+				closest=close(p.x,p.y)
+		goToPosition(small)
