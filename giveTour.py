@@ -20,13 +20,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 # For simulation: launch gazebo world & amcl_demo prior to run this script
 import sys
 import os
+import math
 #############
 # Helper Methods  #
 #############
 def getPosition():
 	lines=open("position.txt").readlines()
 	x=float(lines[-4].partition("[")[2].partition(",")[0])
-	y=float(lines[-4].partition("[")[2].partition(",")[2])
+	y=float(lines[-4].partition("[")[2].partition(",")[2].partition(",")[0])
 	return {'x': x, 'y' : y}
 def dist(x1,y1,x2,y2):
 	return math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))
