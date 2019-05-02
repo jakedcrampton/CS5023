@@ -25,7 +25,7 @@ import os
 #############
 def getPosition():
 	reversedLines=reversed(open("position.txt").readlines())
-	print(reversedLines[3][27-31])
+	print(reversedLines[3][27:31])
 def dist(x1,y1,x2,y2):
 	return math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))
 def goToPosition(project):
