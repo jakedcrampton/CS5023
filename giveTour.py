@@ -25,7 +25,7 @@ import math
 # Helper Methods  #
 #############
 def getPosition():
-	os.system("touch tmp; rm tmp; touch tmp; cat postion.txt >> tmp")
+	os.system("touch tmp; rm tmp; touch tmp; cat postion.txt >> tmp;")
 	file=open("tmp")
 	lines=file.readlines()
 	x=float(lines[-4].partition("[")[2].partition(",")[0])
