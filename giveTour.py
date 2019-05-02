@@ -25,11 +25,15 @@ import os
 #############
 def getPosition():
 	lines=open("position.txt").readlines()
-	print(lines[-4].partition("[")[2].partition(",")[0])
+	x=float(lines[-4].partition("[")[2].partition(",")[0])
+	y=float(lines[-4].partition("[")[2].partition(",")[2])
+	return {'x': x, 'y' : y}
 def dist(x1,y1,x2,y2):
 	return math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))
 def goToPosition(project):
-	os.system("python go_to_specific_point_on_map.py "+str(project.x)+" "+str(project.y))
+	curPos=getPosition()
+	while (dist(curPos['x'],curPos['y'],project.x,project.y)>1)
+		os.system("python go_to_specific_point_on_map.py "+str(project.x)+" "+str(project.y))
 	f=open(project.script,"r")
 	f1=f.readlines()
 	for x in f1:
@@ -51,9 +55,9 @@ class project:
 		self.script
 
 if __name__ == '__main__':
-	getPosition()
-	#projects = [project("rocket",-1.98,-8.15,"rocket.txt"),project("racecar",-1.21,-1.42,"racecar.txt"),project("uav",6.69,-0.51,"uav.txt"),project("buggy",12.22,-0.52,"buggy.txt"),project("rover",19.33,-10.9,"rover.txt")]
-	#command = sys.argv[1]
-	#if(command=="fullTour"):
-	#	for p in projects:
-	#		goToPosition(p)
+
+	projects = [project("rocket",-1.98,-8.15,"rocket.txt"),project("racecar",-1.21,-1.42,"racecar.txt"),project("uav",6.69,-0.51,"uav.txt"),project("buggy",12.22,-0.52,"buggy.txt"),project("rover",19.33,-10.9,"rover.txt")]
+	command = sys.argv[1]
+	if(command=="fullTour"):
+		for p in projects:
+			goToPosition(p)
