@@ -25,16 +25,21 @@ import math
 # Helper Methods  #
 #############
 def getPosition():
-	lines=open("position.txt").readlines()
+	file=open("position.txt")
+	lines=file.readlines()
 	x=float(lines[-4].partition("[")[2].partition(",")[0])
 	y=float(lines[-4].partition("[")[2].partition(",")[2].partition(",")[0])
+	file.close()
 	return {'x': x, 'y' : y}
+	
 def dist(x1,y1,x2,y2):
 	return math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))
 def goToPosition(project):
 	curPos=getPosition()
-	print (curPos)
-	while (dist(curPos['x'],curPos['y'],project.x,project.y)>1):
+	
+	close=dist(curPos['x'],curPos['y'],project.x,project.y)
+	while (close>3):
+		print (curPos)
 		os.system("python go_to_specific_point_on_map.py "+str(project.x)+" "+str(project.y))
 	f=open(project.script,"r")
 	f1=f.readlines()
