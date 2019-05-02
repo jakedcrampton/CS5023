@@ -19,6 +19,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 # running prior to starting this script
 # For simulation: launch gazebo world & amcl_demo prior to run this script
 import sys
+import rospy
 import os
 #############
 # Helper Methods  #
