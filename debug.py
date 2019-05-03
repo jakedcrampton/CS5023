@@ -7,7 +7,7 @@ if __name__ == '__main__':
 		if(os.stat("reqs.txt").st_size != 0):
 			file=open("reqs.txt")
 			lines=file.readlines();
-			print(lines[0])
+			os.system(lines[0])
 			os.system("rm reqs.txt; touch reqs.txt")
 			file.close()
 		else:

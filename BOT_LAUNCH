@@ -1,0 +1,22 @@
+This will be quick and is written for someone who has already done this at least once.
+Edit: This was only tested on astra bots (black ones )
+
+1) Plug in the bot to the laptop, turn the laptop on, turn on bot.
+
+2) Record bot IP using ifconfig.
+
+3) //this step isn't necessary for this project
+
+4) Check the ~/.bashrc files of the bot. they should have the following:
+
+TURTLEBOT bashrc:
+export ROS_HOSTNAME=IP_OF_TURTLEBOT
+export ROS_MASTER_URI=http://IP_OF_TURTLEBOT:11311
+export TURTLEBOT_3D_SENSOR=astra
+
+5) source ~/.bashrc if you changed them
+
+6) On the two terminals, run the following
+
+$ roslaunch turtlebot_bringup minimal.launch --screen
+

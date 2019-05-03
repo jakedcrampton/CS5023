@@ -1,0 +1,58 @@
+[
+ {
+  "trigger": "Full tour",
+  "command": "echo \"python giveTour.py fullTour\" > ~/Desktop/Cram0002/reqs.txt",
+  "ground": "foreground",
+  "voice": "tour",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "Go to Dune Buggy",
+  "command": "echo \"python giveTour.py buggy\" > ~/Desktop/Cram0002/reqs.txt",
+  "ground": "foreground",
+  "voice": "words",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "Go to Planes",
+  "command": "echo \"python giveTour.py uav\" > ~/Desktop/Cram0002/reqs.txt",
+  "ground": "foreground",
+  "voice": "",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "Go to Race Car",
+  "command": "echo \"python giveTour.py racecar\" > ~/Desktop/Cram0002/reqs.txt",
+  "ground": "foreground",
+  "voice": "",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "Go to rover",
+  "command": "echo \"python giveTour.py rover\" > ~/Desktop/Cram0002/reqs.txt",
+  "ground": "foreground",
+  "voice": "",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "Go to Rocket",
+  "command": "echo \"python giveTour.py rocket\" > ~/Desktop/Cram0002/reqs.txt",
+  "ground": "foreground",
+  "voice": "",
+  "voiceReply": "",
+  "allowParams": "false"
+ },
+ {
+  "trigger": "Nearest Project",
+  "command": "echo \"python giveTour.py goToNearest\" > ~/Desktop/Cram0002/reqs.txt",
+  "ground": "foreground",
+  "voice": "",
+  "voiceReply": "",
+  "allowParams": "false"
+ }
+]

@@ -1,0 +1,16 @@
+Title: README
+Authors: Jake Crampton, Kalen Smith, Jackson Pollard
+Description: Important notes before running tour bot
+
+Documentation:
+- LAUNCH_INSTRUCTIONS contains info on running the project
+- BOT_LAUNCH contains a quick guide on launching the turtlebot
+- AMAZON-ECHO-SETUP containst detailed instructions 
+- MAPPING contains instructions on how to get the map used in LAUNCH_INSTRUCTIONS
+
+Extra Installs:
+PS4 controller locomotion:
+  If youn want to use ps4only.py to do locomotion, you need to install the inputs library, located at https://pypi.org/project/inputs/
+
+Text to Speech:
+  This is necessary. It's at https://pyttsx.readthedocs.io/en/latest/install.html

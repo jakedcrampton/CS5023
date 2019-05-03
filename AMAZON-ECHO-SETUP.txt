@@ -1,0 +1,47 @@
+Required Devices and softwares: 
+
+	Required to interface with Alexa:
+
+		TriggerCMD JSON Agent Install
+		SmartThings developer account
+		SmartThings phone application
+		Amazon Echo
+		SmartThings Alexa Skill
+
+	Required to Interface with ROS:
+
+		Ubuntu 16.0 Computer
+		ROS install
+		Python script that listens to a text file
+
+How to set up the Alexa interface:
+	
+	Step 1: Download and install TriggerCMD JSON Agent Linux installation package from this site: https://www.triggercmd.com/
+	Step 2: Write all commands you wish to execute into the JSON file with an associated trigger phrase. 
+		Ignore the Alexa section of the JSON as it does not work with Alexa Custom Routines.
+	Step 3: Make a free SmartThings developer account on this website: https://smartthings.developer.samsung.com/
+	Step 4: Go to "create new SmartApp" on the SmartThings IDE
+	Step 5: Use the "from code" option when created and import the code found in Smart-Home-Trigger-Application.txt (this is open source 			code)
+	Step 6: Duplicate the application for as many commands as you wish to implement on Alexa.
+	Step 7: Go to "create new Device Handler" on the SmartThings IDE
+	Step 8: Select the "publish for me" option on all Device Handlers and SmartApps that you have created.
+	Step 9: Download the "Alexa" application and the "SmartThings Classic" application. Be sure it is "Smarthings Classic" as the regular 			SmartThings app has no SmartApp integration features
+	Step 10: Open the "SmartThings Classic" application and create a new location, and name it whatever you want
+	Step 11: Open the location and go to the automation tab, and then the SmartApp tab
+	Step 12: Click the add SmartApp button and select an app that you published in step 8. For each app, you must enter your login info 			 for the JSON Agent for it to be able to access the commands.
+	Step 13: Select only one command for the application to run and click save (we have found that multiple commands on one SmartApp can 			 break it).
+	Step 14: Repeat steps 11 and 12 for each app and associated command you wrote.
+	Step 15: Now open up the Alexa app and be sure to sync your Echo device to your Amazon account.
+	Step 16: Go to the Skills tab on the Alexa app and enable the SmartThings skill.
+	Step 17: Say "Alexa, search for devices" once the skill is enabled
+	Step 18: Step 17 should have added all the commands as switches under the Alexa Devices tab. Verify this and then open the Routines tab.
+	Step 19: Write a custom Alexa command for each associated keyboard command. The activation command can be any string starting with 			 Alexa. Add a response for Alexa to say back to the user as well. Then click add, and select "Smart Home" from the dropdown, 			 then select the command switch you want to flip and set it to on, meaning Alexa will flip that command switch when the 		 associated voice command is spoken.
+	Step 20: Save the routine.
+	Step 21: Repeat steps 19 and 20 for each custom command you chose to implement.
+	Step 22: You're done. Speaking your custom commands to Alexa will now execute the associated shell commands on a computer.
+
+How to interface with ROS:
+
+	The directory from which commands are run by the TriggerCMD webserver is not the home directory, nor does it have the 
+	same permissions/installs as the default users. Because of this issue it cannot run ROS commands directly with its permissions. The 		work around for these permissions issues is to write trgger phrases to a text file witch you can watch with your other python
+	applications to look for the necessary trigger phrases to tell them to run associated ROS commands.

@@ -1,0 +1,32 @@
+Title: LAUNCH_INSTRUCTIONS
+Authors: Jake Crampton, Kalen Smith, Jackson Pollard
+Description: Describes how to launch our project2 code and explains the xml files
+
+Note:
+-Please read the README before continuing
+
+Running the Project:
+1) Setup
+Make sure you have a map (MAPPING explains how) and also have the alexa commands
+
+2) TurtleBot
+Launch the bot as described in BOT_LAUNCH
+
+3) Position Turtlebot
+Position the robot where you want it to start within the map
+
+4) make 2 new terminal windows with the following
+$ roslaunch turtlebot_navigation amcl_demo.launch map_file:={FULL PATH TO YOUR MAP.YAML}
+$ roslaunch turtlebot_rviz_launchers view_navigation.launch
+
+5) In rviz, give your bot a pose estimate
+
+6) cd to this directory, and make two new terminals with the following
+$ rosrun tf tf_echo /map /base_link >> position.txt
+$ python debug.py
+
+7) open the triggerCMD app
+
+8) profit
+
+NOTES: You have to have your triggerCMD commands set to specific things. See our example json for the commands we used.

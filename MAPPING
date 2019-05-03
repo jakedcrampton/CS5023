@@ -1,0 +1,9 @@
+This explains how to map assuming you've done it before
+
+1) launch the bot using bot launch
+2) do gmapping demo
+3) drive around in sections
+4) save the map pgm and yaml
+5) repeat until you have a bunch of good sections
+6) photoshop them together
+7) update the yaml you want it to run.
